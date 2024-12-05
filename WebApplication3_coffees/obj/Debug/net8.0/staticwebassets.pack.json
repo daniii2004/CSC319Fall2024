@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\mpolk\\Downloads\\WebApplication3_coffees\\WebApplication3_coffees\\wwwroot\\coffee.css",
+      "PackagePath": "staticwebassets\\coffee.css"
+    },
+    {
+      "Id": "C:\\Users\\mpolk\\Downloads\\WebApplication3_coffees\\WebApplication3_coffees\\wwwroot\\coffeeCup.gif",
+      "PackagePath": "staticwebassets\\coffeeCup.gif"
+    },
+    {
+      "Id": "C:\\Users\\mpolk\\Downloads\\WebApplication3_coffees\\WebApplication3_coffees\\wwwroot\\coffeeteaemporium.jpg",
+      "PackagePath": "staticwebassets\\coffeeteaemporium.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mpolk\\Downloads\\WebApplication3_coffees\\WebApplication3_coffees\\wwwroot\\fadedcoffee.gif",
+      "PackagePath": "staticwebassets\\fadedcoffee.gif"
+    },
+    {
+      "Id": "C:\\Users\\mpolk\\Downloads\\WebApplication3_coffees\\WebApplication3_coffees\\wwwroot\\favflavors.html",
+      "PackagePath": "staticwebassets\\favflavors.html"
+    },
+    {
+      "Id": "C:\\Users\\mpolk\\Downloads\\WebApplication3_coffees\\WebApplication3_coffees\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\mpolk\\Downloads\\WebApplication3_coffees\\WebApplication3_coffees\\wwwroot\\leftbanner.png",
+      "PackagePath": "staticwebassets\\leftbanner.png"
+    },
+    {
+      "Id": "C:\\Users\\mpolk\\Downloads\\WebApplication3_coffees\\WebApplication3_coffees\\wwwroot\\teabag.jpg",
+      "PackagePath": "staticwebassets\\teabag.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebApplication3_coffees.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebApplication3_coffees.props",
+      "PackagePath": "build\\WebApplication3_coffees.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApplication3_coffees.props",
+      "PackagePath": "buildMultiTargeting\\WebApplication3_coffees.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebApplication3_coffees.props",
+      "PackagePath": "buildTransitive\\WebApplication3_coffees.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
