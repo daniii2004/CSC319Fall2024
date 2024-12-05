@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- NOTE:  Responsive but does not render well in small screens 
+            needs more work to do so -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Example Coffee Tea Emporium</title>
+    <link rel="stylesheet" href="coffee.css"  />
+    <script>
+        coffeenum = 1;
+        maxcoffeenum = 0;
+        async function getmax() {
+            urlmaxcoffeenum = "api/CoffeeInfo/GetNum";
+            response = await fetch(urlmaxcoffeenum);
+            data = await response.json();
+            console.log(data);
+            maxcoffeenum = data;
+            console.log('max is ' + maxcoffeenum);
+            return true;
+        }
+        async function getSpecialCoffee() {
+            url = "api/CoffeeInfo/GetSpecial/" + coffeenum;
+            console.log(url);
+            response = await fetch(url);
+            data = await response.json();
+            console.log(data);
+            a = data.Sizeinoz;
+            b = data.Flavorname;
+            c = data.Price;
+            msg = a + " oz " + b + ": <br>  $ " + c.toFixed(2) + "<br><br>";
+            coffeenum++;
+            if (coffeenum > maxcoffeenum) coffeenum = 1;
+            document.getElementById("placeforspecials").innerHTML = msg;
+
+ 
+        }
+    </script>
+
+</head>
+<body onload="getmax(); getSpecialCoffee(); setInterval(getSpecialCoffee, 1000);">
+    <div class="coffeegrid">
+        <!-- row 1 elements -->
+        <div class="marginLook1">&nbsp;</div>
+        <div class="coffeecup1">
+            <img class="ccup" src="coffeeCup.gif"  alt="steaming cup of coffee" />
+        </div>
+        <div class="coffeetealogo">
+            <h2 class="centerit">COFFEE TEA EMPORIUM</h2>
+            <img class="logosize" src="coffeeteaemporium.jpg" alt="logo photo" />
+        </div>
+        <div class="coffeecup2 faded">
+             <br /> SPECIALS OF THE DAY <br/>
+                    ******************* <br/><br/>
+             <div id="placeforspecials"></div>
+             
+        </div>
+        <div class="marginLook12">&nbsp;</div>
+        <!-- row 2 elements-->
+        <div class="linksection">
+            <div class="herelink"> <!-- Home -->
+            <img src="teabag.jpg" alt="tea bag icon" class="showornot" />
+            Home
+            </div>
+            <br/>
+            <div class="hyper">
+                <a href="aboutus.html">
+                    <img src="teabag.jpg" alt="tea bag icon" class="showornot" />
+                    About Us 
+                </a>
+            </div>
+            <br/>
+            <div class="hyper">
+                <a href="favflavors.html">
+                    <img src="teabag.jpg" alt="tea bag icon" class="showornot" />
+                    Fav Flavors
+                </a>
+            </div>
+            <br/>
+            <div class="hyper">
+                <a href="blank.html">
+                    <img src="teabag.jpg" alt="tea bag icon" class="showornot" />
+                    Locations
+                </a>
+            </div>
+            <br/>
+        </div>  <!-- end linksection -->
+        <div class="logotext">
+            <br/><br/>
+            Coffee Tea Emporium is a friendly place to meet friends, relax with a cup of java after
+          a busy day, or drop-in to pick up a great cup of coffee or warm cup of tea.  We are open 24 hours a day for your convenience and
+          stock fresh, delicious bakery goods too!
+        <br/><br/>
+Come on in and meet the staff. We are always welcome to see you and anxious to brew up a delicious coffee flavor of your choice. We also have latte, expresso and cappuchino flavors you are sure to enjoy. Or
+          if you rather, we can steep a refreshing blend of tea to warm your day. 
+        </div>
+     <!-- row 3 elements -->
+    <div class="copyr">
+        <br/><br/>
+        &copy; your name here
+        <br/> <br/>
+    </div>
+    <div class="cw">
+        <a href="mailto:webmaster@coffeetea.com">
+            Contact webmaster
+        </a>
+    </div>  <!-- end of row 3 -->
+ </div>  <!-- end of grid area -->
+<br/><br/>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

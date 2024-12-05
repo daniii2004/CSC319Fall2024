@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- NOTE:  Responsive but does not render well in small screens 
+            needs more work to do so -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Tea Emporium - Flavors</title>
+    <link rel="stylesheet" href="coffee.css"  />
+    <script>
+        async function allflavors() {
+            whaturl = "api/coffeeinfo/GetAllFlavors";
+            console.log(whaturl);
+            response = await fetch(whaturl);
+            coffeeflavors = await response.json();
+            console.log(coffeeflavors);
+            msg = "";
+            for (i = 0; i < coffeeflavors.length; i++) {
+                msg += "<br/>" + coffeeflavors[i].sizeinoz + " " +
+                    coffeeflavors[i].flavorname + " $" + coffeeflavors[i].price.toFixed(2);
+            }
+            document.getElementById('favorites').innerHTML = msg;
+        }
+        async function holiday() {
+            whaturl = "api/coffeeinfo/GetHolidayFlavors";
+            console.log(whaturl);
+            response = await fetch(whaturl);
+            coffeeflavors = await response.json();
+            console.log(coffeeflavors);
+            msg = "";
+            for (i = 0; i < coffeeflavors.length; i++) {
+                msg += "<br/>" + coffeeflavors[i].sizeinoz + " " +
+                    coffeeflavors[i].flavorname + " $" + coffeeflavors[i].price.toFixed(2);
+            }
+            document.getElementById('favorites').innerHTML = msg;
+        }
+    </script>
+    <style>
+        button {
+                       border: none;
+                       color: white;
+                       padding: 16px 32px;
+                       text-align: center;
+                       text-decoration: none;
+                       display: inline-block;
+                       font-size: 1.5em;
+                       margin-left: 1em; margin-right:1em;
+                       border-radius: 25px;;
+         }
+         .button1 {color:red; background-color: green;}
+         .button2 { background-color: maroon; color: white;}
+    </style>
+</head>
+<body>
+    <div class="coffeegrid">
+        <!-- row 1 elements -->
+        <div class="marginLook1">&nbsp;</div>
+        <div class="coffeecup1">
+            <img class="ccup" src="coffeeCup.gif"  alt="steaming cup of coffee" />
+        </div>
+        <div class="coffeetealogo2">
+            <h2 class="centerit">COFFEE TEA EMPORIUM</h2>
+            <img class="logosize" src="coffeeteaemporium.jpg" alt="logo photo" />
+        </div>
+        <div class="coffeecup22">
+            <img class="ccup" src="coffeeCup.gif"  alt="steaming cup of coffee" />
+        </div>
+        <div class="marginLook12">&nbsp;</div>
+        <!-- row 2 elements-->
+        <div class="linksection">
+            <div class="herelink"> <!-- Home -->
+            <img src="teabag.jpg" alt="tea bag icon" class="showornot" />
+            Home
+            </div>
+            <br/>
+            <div class="hyper">
+                <a href="aboutus.html">
+                    <img src="teabag.jpg" alt="tea bag icon" class="showornot" />
+                    About Us 
+                </a>
+            </div>
+            <br/>
+            <div class="hyper">
+                <a href="blank.html">
+                    <img src="teabag.jpg" alt="tea bag icon" class="showornot" />
+                    Fav Flavors
+                </a>
+            </div>
+            <br/>
+            <div class="hyper">
+                <a href="blank.html">
+                    <img src="teabag.jpg" alt="tea bag icon" class="showornot" />
+                    Locations
+                </a>
+            </div>
+            <br/>
+        </div>  <!-- end linksection -->
+        <div class="logotext2">
+            <br/><br/>
+           <h2>Our Most Popular Menu Items:</h2>
+           <br /><div id="favorites"></div>
+           <br/><button type="button" class="button1" onclick="holiday()">Holiday Choices</button>
+           &emsp14;<button type="button" class="button2" onclick="allflavors()">All favorites</button>
+          
+        </div>
+     <!-- row 3 elements -->
+    <div class="copyr">
+        <br/><br/>
+        &copy; your name here
+        <br/> <br/>
+    </div>
+    <div class="cw">
+        <a href="mailto:webmaster@coffeetea.com">
+            Contact webmaster
+        </a>
+    </div>  <!-- end of row 3 -->
+ </div>  <!-- end of grid area -->
+<br/><br/>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
